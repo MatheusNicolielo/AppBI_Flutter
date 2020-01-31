@@ -51,7 +51,7 @@ class Service {
     );
   }
 
-  static Widget _mostrarLinhasDaColuna(String texto) {
+  static Widget mostrarLinhasDaColuna(String texto) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
@@ -67,19 +67,18 @@ class Service {
       ],
     );
   }
-}
 
-  Widget getTextWidgets(List<String> strings) {
+  static Widget getTextWidgets(List<String> strings) {
     List<Widget> list = new List<Widget>();
     for (var i = 0; i < strings.length; i++) {
       list.add(
-        Service._mostrarLinhasDaColuna(strings[i]),
+        Service.mostrarLinhasDaColuna(strings[i]),
       );
     }
     return Column(children: list);
   }
 
- Widget _mostrarColuna(List<String> textos, double tamanhoColuna){
+  static Widget mostrarColuna(List<String> textos, double tamanhoColuna) {
     return Container(
       height: tamanhoColuna,
       width: double.infinity,

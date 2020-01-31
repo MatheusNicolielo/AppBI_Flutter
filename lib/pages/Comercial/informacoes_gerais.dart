@@ -83,7 +83,7 @@ class _InformacoesGeraisComercialState
           14,
           Colors.grey.shade600,
         ),
-        _mostrarColuna(
+        Service.mostrarColuna(
           ["Estar na tela de 'TopN'", "Abrir o painel e selecionar 'Produtos'"],
           56,
         ),
@@ -92,7 +92,7 @@ class _InformacoesGeraisComercialState
           14,
           Colors.grey.shade600,
         ),
-        _mostrarColuna(
+        Service.mostrarColuna(
           ["Apenas um Ano", "Apenas um Mês", "Apenas dos clientes X, Y, Z"],
           84,
         ),
@@ -101,7 +101,7 @@ class _InformacoesGeraisComercialState
           14,
           Colors.grey.shade600,
         ),
-        _mostrarColuna(
+        Service.mostrarColuna(
           ["Agrupador: Estado", "Métrica: Faturamentos"],
           56,
         ),
@@ -163,7 +163,7 @@ class _InformacoesGeraisComercialState
           14,
           Colors.grey.shade600,
         ),
-        _mostrarColuna(
+        Service.mostrarColuna(
           [
             "Valor de cada mês no ano",
             "Valor total de cada semana",
@@ -181,46 +181,6 @@ class _InformacoesGeraisComercialState
         Divider(
           color: Colors.grey,
         ),
-      ],
-    );
-  }
-
-  Widget _mostrarColuna(List<String> textos, double tamanhoColuna) {
-    return Container(
-      height: tamanhoColuna,
-      width: double.infinity,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: <Widget>[
-          getTextWidgets(textos),
-        ],
-      ),
-    );
-  }
-
-  Widget getTextWidgets(List<String> strings) {
-    List<Widget> list = new List<Widget>();
-    for (var i = 0; i < strings.length; i++) {
-      list.add(
-        _mostrarLinhasDaColuna(strings[i]),
-      );
-    }
-    return Column(children: list);
-  }
-
-  Widget _mostrarLinhasDaColuna(String texto) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        Icon(
-          Icons.lens,
-          size: 10,
-        ),
-        Service.adicionarTextoPadrao(
-          texto,
-          15,
-          Colors.grey.shade600,
-        )
       ],
     );
   }
