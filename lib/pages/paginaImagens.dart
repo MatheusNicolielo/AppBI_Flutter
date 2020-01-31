@@ -16,39 +16,31 @@ class _ImagesPageState extends State<ImagesPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      appBar: widget._showAppbar
-          ? AppBar(
-              backgroundColor: Colors.grey.shade400.withOpacity(0.1),
-              elevation: 0.5,
-              leading: InkWell(
-                child: Icon(
-                  Icons.arrow_back,
-                  color: Colors.white,
+      body: Stack(
+        children: <Widget>[
+          InkWell(
+            child: Container(
+              height: double.infinity,
+              width: double.infinity,
+              child: PhotoView(
+                initialScale: PhotoViewComputedScale.contained * 1,
+                minScale: PhotoViewComputedScale.contained * 0.9,
+                imageProvider: AssetImage(
+                  widget.imagem,
                 ),
-                onTap: () {
-                  Navigator.pop(context);
-                },
               ),
-            )
-          : PreferredSize(
-              child: Container(),
-              preferredSize: Size(0.0, 0.0),
             ),
-      body: InkWell(
-        child: Container(
-          height: double.infinity,
-          width: double.infinity,
-          child: PhotoView(
-            initialScale: PhotoViewComputedScale.contained * 1,
-            minScale: PhotoViewComputedScale.contained * 0.9,
-            imageProvider: AssetImage(
-              widget.imagem,
-            ),
+            onTap: () {
+              _atualizarShowAppBar();
+            },
           ),
-        ),
-        onTap: () {
-          _atualizarShowAppBar();
-        },
+          widget._showAppbar
+              ? _adicionarAppBar()
+              : PreferredSize(
+                  child: Container(),
+                  preferredSize: Size(0.0, 0.0),
+                ),
+        ],
       ),
     );
   }
@@ -59,5 +51,29 @@ class _ImagesPageState extends State<ImagesPage> {
           ? widget._showAppbar = true
           : widget._showAppbar = false;
     });
+  }
+
+  Widget _adicionarAppBar() {
+    return Container(
+      height: 90,
+      width: double.infinity,
+      color: Colors.grey.shade800.withOpacity(0.3),
+      child: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Container(
+          alignment: Alignment.bottomLeft,
+          child: InkWell(
+            child: Icon(
+              Icons.arrow_back,
+              color: Colors.white,
+              size: 30,
+            ),
+            onTap: () {
+              Navigator.pop(context);
+            },
+          ),
+        ),
+      ),
+    );
   }
 }
