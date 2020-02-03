@@ -1,5 +1,6 @@
 import 'package:app_bi/models/lista_conteudos_model.dart';
 import 'package:app_bi/pages/Comercial/menu_inical.dart';
+import 'package:app_bi/pages/Comercial/pagina_filtros.dart';
 import 'package:app_bi/tile/lista_conteudos_tile.dart';
 import 'package:flutter/material.dart';
 
@@ -30,6 +31,7 @@ class ComercialPage extends StatefulWidget {
         id: DateTime.now().millisecondsSinceEpoch,
         item: "Página de Filtros",
         lugar: 3,
+        pagina: PaginaDeFiltrosComercial(),
       ),
     );
     conteudos.add(

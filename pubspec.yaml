@@ -48,6 +48,7 @@ flutter:
     - assets/images/drilldown.png
     - assets/images/drilldown2.png
     - assets/images/iconesdrill.png
+    - assets/images/PaginaDeFiltros.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
