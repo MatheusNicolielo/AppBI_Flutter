@@ -1,4 +1,3 @@
-import 'package:app_bi/pages/paginaImagens.dart';
 import 'package:app_bi/repository/Service.dart';
 import 'package:flutter/material.dart';
 
@@ -37,7 +36,7 @@ class _MenuInicialComercialState extends State<MenuInicialComercial> {
                 children: <Widget>[
                   Service.adicionarImagem(
                     225,
-                    "assets/images/menu_inicial.png",
+                    "assets/images/Comercial/menu_inicial.png",
                     context,
                   ),
                   Service.adicionarTextoPadrao(

@@ -37,7 +37,7 @@ class _PaginaDeFiltrosComercialState extends State<PaginaDeFiltrosComercial> {
                 children: <Widget>[
                   Service.adicionarImagem(
                     225,
-                    "assets/images/PaginaDeFiltros.png",
+                    "assets/images/Comercial/PaginaDeFiltros.png",
                     context,
                   ),
                   Service.adicionarTextoPadrao(

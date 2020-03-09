@@ -61,7 +61,7 @@ class Service {
         ),
         Service.adicionarTextoPadrao(
           texto,
-          15,
+          14,
           Colors.grey.shade600,
         )
       ],

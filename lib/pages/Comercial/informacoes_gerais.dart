@@ -77,7 +77,8 @@ class _InformacoesGeraisComercialState
           18,
           Colors.black,
         ),
-        Service.adicionarImagem(60, "assets/images/Icones.png", context),
+        Service.adicionarImagem(
+            60, "assets/images/Comercial/Icones.png", context),
         Service.adicionarTextoPadrao(
           "1. Painel de Agrupadores: Ao selecioná-lo irá abrir o painel de agrupadores da respectiva tela, nele você pode alterar por qual informação o dado está sendo vizualizado, ex: Atualmente está o padrão(Estado), mas gostaria de vizualizar o topN Faturamento por 'Produtos', basta:",
           14,
@@ -130,8 +131,10 @@ class _InformacoesGeraisComercialState
           14,
           Colors.grey.shade600,
         ),
-        Service.adicionarImagem(225, "assets/images/drilldown.png", context),
-        Service.adicionarImagem(225, "assets/images/drilldown2.png", context),
+        Service.adicionarImagem(
+            225, "assets/images/Comercial/drilldown.png", context),
+        Service.adicionarImagem(
+            225, "assets/images/Comercial/drilldown2.png", context),
         Divider(
           color: Colors.grey,
         ),
@@ -147,7 +150,8 @@ class _InformacoesGeraisComercialState
           18,
           Colors.black,
         ),
-        Service.adicionarImagem(30, "assets/images/iconesdrill.png", context),
+        Service.adicionarImagem(
+            30, "assets/images/Comercial/iconesdrill.png", context),
         Service.adicionarTextoPadrao(
           "1. Drill Up: Subir um nível na hierarquia",
           14,

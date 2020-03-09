@@ -1,4 +1,6 @@
 import 'package:app_bi/models/lista_vendas_model.dart';
+import 'package:app_bi/pages/Comercial/Vendas/periodo.dart';
+import 'package:app_bi/pages/Comercial/Vendas/topn.dart';
 import 'package:app_bi/repository/Service.dart';
 import 'package:app_bi/tile/lista_vendas_tile.dart';
 import 'package:flutter/material.dart';
@@ -12,6 +14,7 @@ class VendasComercial extends StatefulWidget {
         id: DateTime.now().millisecondsSinceEpoch,
         item: "TopN",
         lugar: 1,
+        pagina: TopNComercial(),
       ),
     );
     vendas.add(
@@ -19,6 +22,7 @@ class VendasComercial extends StatefulWidget {
         id: DateTime.now().millisecondsSinceEpoch,
         item: "Período",
         lugar: 2,
+        pagina: PeriodoComercial(),
       ),
     );
     vendas.add(
